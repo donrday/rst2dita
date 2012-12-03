@@ -4,13 +4,14 @@ rst2dita
 
 Migrate reStructuredText documents into DITA maps and topics via the Python rst2xml process
 
-This project extends an initial proof of concept pilot which was documented at http://learningbywrote.com/blog/2011/04/creating-dita-topics-using-restructuredtext/
-
 ==========
 Background
 ==========
 
 *To a writer whose only tool is a flat text editor, formatted text is the next best thing to a real DITA editor.*
+
+This project extends an initial proof of concept pilot which was documented at http://learningbywrote.com/blog/2011/04/creating-dita-topics-using-restructuredtext/
+
 
 About reStructuredText
 ----------------------
