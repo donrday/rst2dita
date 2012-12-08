@@ -1,0 +1,33 @@
+
+Git for beginners: The definitive practical guide
+
+http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide#320140
+
+Git Isn't Hard
+
+PJ Hyett, Nov 23, 2008
+
+When we tell people why they should use Git over Subversion, the go-to line is, “Git does Subversion better than Subversion, but it does a lot more than that.”
+
+The “lot more” is comprised of a bunch of stuff that makes Git really shine, but it can be pretty overwhelming for those coming from other SCM’s like Subversion.
+
+That said, there’s nothing stopping you from using Git just like you use Subversion while you’re making the transition.
+
+Assuming you’ve installed the necessary software and have a remote repository somewhere, this is how you would grab the code and push your changes back with Subversion:
+
+$ svn checkout svn://foo.googlecode.com/svn/trunk foo
+# make your changes
+$ svn commit -m "my first commit"
+
+And how would you do it in Git:
+
+$ git clone git@github.com:pjhyett/foo.git
+# make your changes
+$ git commit -a -m "my first commit"
+$ git push
+
+One more command to make it happen in Git. That extra command has large implications, but for the purposes of this post, that’s all we’re talking about, one extra command.
+
+See, it really isn’t that hard.
+
+Update: I’d be remiss to not also mention that the equivalent of updating your local copy in Subversion compared to Git is svn update and git pull, respectively. Only one command in both cases.
