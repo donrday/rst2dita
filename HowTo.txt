@@ -1,0 +1,48 @@
+===========
+Topic Title
+===========
+In general, run cmdstart.bat to open a shell that is ready for either python or java/saxon commands.
+
+To install Python
+-----------------
+This will work with either standard or cmdstart.bat shells invoked.
+
+1. Download and run latest Windows Python installer (it will have a .msi extension)
+2. Add the python path to the ``%path%`` variable::
+
+     set %path%;C:\Python26
+
+3. Open a command shell and enter ``python \-\-help`` to test the installation.
+
+To convert rst files into docutils XML
+--------------------------------------
+This will work with either standard or cmdstart.bat shells invoked.
+
+1. Copy your rst source files into the docutils directory which you previously placed in the DITA OT root folder.
+2. cd into the docutils directory
+3. Run the tools/rst2xml.py tool to convert each rst file into well-formed XML::
+
+     C:\DITA-OT1.5.2\docutils>python tools/rst2xml.py \-\-help
+
+Usage
+^^^^^
+
+::
+
+  rst2xml.py [options] [<source> [<destination>]]
+
+To convert well-formed docutils XML files into DITA maps and topics
+-------------------------------------------------------------------
+This will work only with the cmdstart.bat shell invoked.
+
+1. Navigate your file explorer to the DITA OT directory
+2. Double-click on startcmd.bat to open up a prepared DOT shell environment
+3. cd into the docutils directory
+4. Execute the docutils XML to DITA transform ::
+
+    C:\DITA-OT1.5.2\docutils>java net.sf.saxon.Transform
+      -s:result_rst2xml-help.xml
+      -xsl:xsl/docutils2map.xsl
+      -o:my_result_rst2xml-help.ditamap
+
+    C:\DITA-OT1.5.2\docutils>java net.sf.saxon.Transform -s:result_montecristo.xml -xsl:xsl/docutils2map.xsl -o:my_result_montecristo.ditamap

@@ -1,0 +1,27 @@
+===========================================
+Creating DITA topics using reStructuredText
+===========================================
+*To a writer whose only tool is a flat text editor, formatted text is the next best thing to a real DITA editor.*
+
+In fact, the process is one of the more reliable alternate authoring methods among those I've been writing about. Even the use of cell phone photos, while described facetiously for April Fools, has a place whenever the source format is so utterly obtuse that scanning the printout is the best way of filtering out the gorpy markup.
+
+About reStructuredText
+----------------------
+reStructuredText is a well-documented example of the family of intuitive markup styles known as 
+`lightweight markup <http://en.wikipedia.org/wiki/Lightweight_markup_language>`_ (which includes various wikitext dialects).
+
+Popular examples of lightweight markup include the `MediaWiki <http://en.wikipedia.org/wiki/MediaWiki>`_, Eclipse-based `Mylyn <http://www.eclipse.org/mylyn/>`_, and `Creole <http://en.wikipedia.org/wiki/Creole_(markup)>`_ wikitext styles and their particular tools. DITA converters exist for some of these, notably for the `Mylyn project <http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.mylyn.wikitext.help.ui/help/Markup-Conversion.html>`_.
+
+reStructuredText (also called rst or sometimes--conflicting with 'RESTful' API usage--reST) is popular in the Python programming community and has gained a recent boost in visibility by being recognized as a strategic markup strategy for materials in the Gutenberg Project. The part that appealed most to me about rst as a format is that the Python docutils toolkit includes a parser that generates an XML representation of the fully normalized document structure. **Having an XML representation of a lightweight markup makes the subsequent migration as DITA vastly simpler and more reliable.**
+
+Process
+-------
+I composed today's post entirely in a flat text editor, except that I used a clever, "live-rendering" view that gave me some visual feedback and integrated help as I typed (see `Online reStructuredText editor <http://rst.ninjs.org/>`_).
+
+Then I copied and pasted my "source" into a file, rstPost.txt, and used the rst2xml.py Python tool to generate an intermediate xml representation which I then converted into a DITA map and related subtopics using a set of XSLT transforms that I'm preparing for contribution to the DITA Open Toolkit. Finally, I used the expeDITA live map rendering feature to create the HTML view that I will paste into my WordPress blog in a few minutes.
+
+Thoughts
+--------
+If you already know reStructuredText conventions, then you can appreciate how useful this type of conversion process can be. In effect, this process now defines a fairly reliable migration path for existing rst content that you might desire to convert into DITA. For me, the most useful application is for editing "DITA" content on a cell phone, where text editing remains primitive, and structured editing support has tremendous usability issues. Just open a textarea field, type in your text equivalent of your desired structure, and then call back-end services to parse and transform that content into your ideal DITA format on the server.
+
+The downside is that proper XML parsing is only possible using Python tools, which means that the process is not portable to servers based on popular Java or PHP stacks without using remote calls or web services. However, the reliability of the XML-based process makes the pain worth enduring for this case of at least one wikitext-like format that can support somewhat reliable migration into DITA wherever text-only content entry is your starting point.
