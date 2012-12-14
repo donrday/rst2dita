@@ -31,4 +31,4 @@ With content in hand, use the rst2xml.py Python tool to generate an intermediate
 
 License
 -------
-Originally contributed by Don R. Day with the intention of being compliant with the DITA Open Toolkit suite of tools and plugins. Therefore the Apache Software License 2.0 shall apply to files in this repository.
+Originally contributed by Don R. Day with the intention of the package being compliant with the DITA Open Toolkit suite of tools and plugins. Therefore the Apache Software License 2.0 shall apply to files in this repository.
