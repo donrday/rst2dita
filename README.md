@@ -28,3 +28,7 @@ Process
 Posts created using popular markdown syntaxes are typically created in a flat text editor, typically supported by a "live-rendering" view that gives visual feedback and integrated help (for example, see `Online reStructuredText editor <http://rst.ninjs.org/>`_).
 
 With content in hand, use the rst2xml.py Python tool to generate an intermediate xml representation. This is then converted into a DITA map and related subtopics using a set of XSLT transforms. 
+
+License
+-------
+Originally contributed by Don R. Day with the intention of being compliant with the DITA Open Toolkit suite of tools and plugins. Therefore the Apache Software License 2.0 shall apply to files in this repository.
