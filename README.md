@@ -4,6 +4,8 @@ rst2dita
 
 Migrate reStructuredText documents into DITA maps and topics via the Python rst2xml process
 
+(Worth noting, now there is also this separate project, `rst2dita roundtrip <https://github.com/mgcalo/rst2dita/>`, which includes a topic-to-rst transform.)
+
 ==========
 Background
 ==========
